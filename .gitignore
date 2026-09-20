@@ -1,0 +1,10 @@
+.env
+data/master_resume.yaml
+output/
+.cache/
+__pycache__/
+.venv/
+node_modules/
+*.aux
+*.log
+*.out

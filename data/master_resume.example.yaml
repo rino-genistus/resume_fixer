@@ -1,0 +1,66 @@
+# Copy to data/master_resume.yaml (gitignored) and fill in.
+# Include MORE bullets than fit on one page; the app picks per job.
+# Every bullet must be true. The app will never add anything not written here.
+
+contact:            # never sent to the LLM
+  name: First Last
+  phone: "555-555-5555"
+  email: you@example.com
+  linkedin: linkedin.com/in/you
+  github: github.com/you
+
+limits:             # max bullets rendered per entry
+  experience: 4
+  projects: 3
+  max_projects: 3
+
+education:
+  - school: University Name
+    location: City, ST
+    degree: B.S. Computer Science
+    dates: Aug 2023 – Jan 2027
+    details: "GPA: 3.x | Relevant coursework: Machine Learning, Databases, Distributed Systems"
+
+experience:
+  - id: exp_company1
+    title: Software Engineering Intern
+    company: Company Name
+    location: City, ST
+    dates: May 2026 – Aug 2026
+    bullets:
+      - id: exp_company1_b1
+        text: Built a FastAPI service that cut report generation time from 40s to 6s by caching Snowflake query results
+        skills: [Python, FastAPI, Snowflake, Caching]
+      - id: exp_company1_b2
+        text: ...
+        skills: []
+
+projects:
+  - id: proj_example
+    name: Project Name
+    tech: [Python, LangGraph, Ollama, React]
+    dates: Jan 2026 – Present
+    link: github.com/you/project
+    bullets:
+      - id: proj_example_b1
+        text: Designed a multi-agent pipeline using LangGraph that ...
+        skills: [LangGraph, LLM Agents, Python]
+
+# Master skills list. Only these can appear in the resume.
+# aliases let the matcher and validator treat JD variants as the same skill.
+skills:
+  Languages:
+    - {name: Python}
+    - {name: TypeScript}
+    - {name: SQL}
+  Frameworks:
+    - {name: FastAPI}
+    - {name: React}
+    - {name: LangGraph}
+  AI/ML:
+    - {name: Large Language Models, aliases: [LLM, LLMs]}
+    - {name: Retrieval-Augmented Generation, aliases: [RAG]}
+  Tools:
+    - {name: PostgreSQL, aliases: [Postgres]}
+    - {name: Docker}
+    - {name: Amazon Web Services, aliases: [AWS]}

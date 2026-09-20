@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+pydantic
+jinja2
+pyyaml
+pypdf
+litellm
+google-genai
+httpx
+trafilatura
+pytest
